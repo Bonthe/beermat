@@ -1,0 +1,48 @@
+{
+  "name": "Beermat",
+  "description": "A Beermat application for a trusted cash register",
+  "version": "0.0.1",
+  "author": "Bonthe",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "gulp-cached": "^1.1.1",
+    "gulp-minify-css": "^1.2.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.14"
+  },
+  "scripts": {
+    "watch": "NODE_ENV=development gulp watch",
+    "build": "NODE_ENV=production gulp build"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.41",
+    "@types/react": "^15.0.10",
+    "@types/react-dom": "^0.14.19",
+    "@types/react-recaptcha": "^2.2.4",
+    "browser-sync": "^2.18.12",
+    "browserify": "^14.4.0",
+    "bundle-collapser": "1.2.1",
+    "envify": "4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "4.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-envify": "^1.0.0",
+    "gulp-less": "3.3.0",
+    "gulp-remember": "0.3.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-serve": "^1.4.0",
+    "gulp-sourcemaps": "2.6.0",
+    "gulp-typescript": "^3.1.7",
+    "gulp-uglify": "3.0.0",
+    "gulp-util": "3.0.8",
+    "gulp-watch": "^4.3.11",
+    "tsify": "^3.0.1",
+    "tslint": "5.4.3",
+    "typescript": "^2.3.3",
+    "vinyl-buffer": "1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "3.9.0"
+  }
+}

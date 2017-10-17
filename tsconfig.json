@@ -1,0 +1,29 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist/",
+		"sourceMap": true,
+		"noImplicitAny": false,
+		"module": "commonjs",
+		"target": "es5",
+		"jsx": "react",
+		"preserveConstEnums": true,
+		"removeComments": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+		"types" : [ "node" ],
+		"lib": [
+			"es5",
+			"es2015",
+			"es2017",
+			"dom",
+			"scripthost"
+		]
+	},
+	"exclude": [
+		"./dev"
+	],
+	"include": [
+		"./src",
+		"./typings"
+	]
+}
