@@ -1,10 +1,12 @@
 import * as React from "react";
 import { render } from "react-dom";
+import MainContainer from "./components/overview";
 
-const element = (
-	<h1>
-		Hello
-	</h1>
+const BeermatApp = () => (
+	<div>
+		<div>Beermat</div>
+		<MainContainer />
+	</div>
 );
 
-render( element, document.getElementById("root-app") );
+render( <BeermatApp />, document.getElementById("root-app") );

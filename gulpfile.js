@@ -25,7 +25,8 @@ const paths = {
 	html: ["src/**/*.html"],
 	fonts: ["src/fonts/**/*.*"],
 	styles: ["src/styles/index.scss"],
-	i18n: ["src/i18n/**/*.json"]
+	i18n: ["src/i18n/**/*.json"],
+	data: ["src/data/**/*.json"]
 };
 
 // instanciate the tsified-browserify bundler
@@ -58,6 +59,12 @@ function copyHtml() {
 function copyi18N() {
 	return gulp.src(paths.i18n)
 		.pipe(gulp.dest("dist/i18n"));
+}
+
+// Copy static data files
+function copyData() {
+	return gulp.src(paths.data)
+		.pipe(gulp.dest("dist/data"));
 }
 
 // Copy static font files
@@ -157,6 +164,7 @@ function serveBrowserSync() {
 
 gulp.task("copy-html", copyHtml);
 gulp.task("copy-i18n", copyi18N);
+gulp.task("copy-data", copyData);
 gulp.task("copy-fonts", copyFonts);
 gulp.task("copy-and-reload-html", copyAndReloadHtml);
 gulp.task("prod-build", build)
@@ -167,7 +175,7 @@ gulp.task("sass-browsersync", syncStyles);
 gulp.task("browser-sync", serveBrowserSync);
 gulp.task("default", ["copy-html", "build"]);
 
-gulp.task("watch", ["copy-html", "copy-fonts", "copy-i18n", "sass-build", "watch-build", "browser-sync"], () => {
+gulp.task("watch", ["copy-html", "copy-fonts", "copy-i18n","copy-data", "sass-build", "watch-build", "browser-sync"], () => {
 	gulp.watch(paths.styles, ["sass-browsersync"]);
 	gulp.watch(paths.html, ["copy-and-reload-html"]);
 });
